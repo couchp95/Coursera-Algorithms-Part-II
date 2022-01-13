@@ -6,7 +6,7 @@ Compilation:  PASSED
 API:          PASSED
 
 SpotBugs:     PASSED
-PMD:          FAILED (3 warnings)
+PMD:          PASSED
 Checkstyle:   FAILED (0 errors, 1 warning)
 
 Correctness:  23/23 tests passed
@@ -21,7 +21,7 @@ ASSESSMENT DETAILS
 
 The following files were submitted:
 ----------------------------------
-5.8K Jan 12 15:04 BaseballElimination.java
+6.0K Jan 13 03:01 BaseballElimination.java
 
 
 ********************************************************************************
@@ -57,10 +57,6 @@ BaseballElimination:
 
 % pmd .
 *-----------------------------------------------------------
-BaseballElimination.java:13: Can you replace the instance (or static) variable 's' with a local variable? [SingularField]
-BaseballElimination.java:22: Can you replace the instance (or static) variable 'leadingteam' with a local variable? [SingularField]
-BaseballElimination.java:22: The private instance (or static) variable 'leadingteam' can be made 'final'; it is initialized only in the declaration or constructor. [ImmutableField]
-PMD ends with 3 warnings.
 
 
 ================================================================
@@ -68,7 +64,7 @@ PMD ends with 3 warnings.
 
 % checkstyle *.java
 *-----------------------------------------------------------
-[WARN] BaseballElimination.java:17:25: Do not use the letter 'l' as an instance variable name. It is hard to distinguish from the number '1'. [MemberName]
+[WARN] BaseballElimination.java:16:25: Do not use the letter 'l' as an instance variable name. It is hard to distinguish from the number '1'. [MemberName]
 Checkstyle ends with 0 errors and 1 warning.
 
 % custom checkstyle checks for BaseballElimination.java
@@ -267,13 +263,13 @@ Running 1 total tests.
 
     n   constructor isEliminated() + certificateOfElimination()
 ----------------------------------------------------------------
-   30       0.01       0.61
-   36       0.01       1.32
-   42       0.00       2.69
-   48       0.00       4.96
-   54       0.00       8.48
-   60       0.00      14.64
-time = 1.07e-07 * n^4.56  (R^2 = 1.00)
+   30       0.25       0.00
+   36       0.48       0.00
+   42       0.94       0.00
+   48       1.74       0.00
+   54       2.91       0.00
+   60       4.97       0.00
+time = 8.88e-08 * n^4.34  (R^2 = 1.00)
 
 Total: 1/1 tests passed!
 
@@ -290,7 +286,7 @@ Analyzing memory of BaseballElimination
 *-----------------------------------------------------------
 Running 4 total tests.
 
-Student   vertices     = 0.50 n^2 + 0.50 n + 2.00   (R^2 = 1.000)
+Student   vertices     = 0.50 n^2 - 0.50 n + 2.00   (R^2 = 1.000)
 Reference vertices     = 0.50 n^2 - 0.50 n + 3.00   (R^2 = 1.000)
 => passed
 
@@ -298,11 +294,11 @@ Student   edges        = 1.50 n^2 - 3.50 n + 2.00   (R^2 = 1.000)
 Reference edges        = 1.50 n^2 - 3.50 n + 2.00   (R^2 = 1.000)
 => passed
 
-Student   memory of G  = 176.00 n^2 - 344.00 n + 344.00   (R^2 = 1.000)
+Student   memory of G  = 176.00 n^2 - 384.00 n + 344.00   (R^2 = 1.000)
 Reference memory of G  = 176.00 n^2 - 384.00 n + 384.00   (R^2 = 1.000)
 => passed
 
-Student   memory       = 184.33 n^2 - 129.90 n + 754.29   (R^2 = 1.000)
+Student   memory       = 3.74 n^2 + 213.35 n + 267.14   (R^2 = 1.000)
 Reference memory       = 3.99 n^2 + 214.25 n + 396.00   (R^2 = 1.000)
 => passed
 
